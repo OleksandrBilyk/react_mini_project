@@ -3,12 +3,12 @@ import {useEffect, useState} from "react";
 import {IMovie} from "../../interfaces/movieInterface";
 
 import {movieService} from "../../services/movieService";
-import {Movie} from "./Movie";
+import {MovieListCard} from "./MovieListCard";
 import {useSearchParams} from "react-router-dom";
 import style from "./Movie.module.css"
 
 
-const Movies = () => {
+const MovieList = () => {
     const [movies,  setMovies] = useState<IMovie[]>([]);
     const [page, setPage] = useState<number>(0);
     const [query, setQuery] = useSearchParams({page: '1'});
@@ -36,7 +36,7 @@ const Movies = () => {
     }
     return (
         <div>
-            <div className={style.Movies_block}>{movies.map(movie => <Movie key={movie.id}  movie={movie} />)}</div>
+            <div className={style.Movies_block}>{movies.map(movie => <MovieListCard key={movie.id} movie={movie} />)}</div>
             <div>
                 <button disabled={(page <=0 )} onClick={prev}>prev</button>
                 <button disabled={(page >= 500)} onClick={next}>next</button>
@@ -45,4 +45,4 @@ const Movies = () => {
     );
 };
 
-export {Movies};
+export {MovieList};
