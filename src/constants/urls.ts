@@ -7,7 +7,10 @@ const poster = 't/p/w220_and_h330_face'
 const urls = {
     movie: {
         base: movie,
-        poster: poster
+        genre: genre
+    },
+    poster: {
+        base: poster
     }
 }
 
