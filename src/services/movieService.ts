@@ -5,7 +5,6 @@ import {urls} from "../constants/urls";
 
 const movieService = {
     getAll: (page: any): IRes<IMovies> => apiService.get(urls.movie.base, {params:{page}}),
-
 }
 
 export {
