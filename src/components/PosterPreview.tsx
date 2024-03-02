@@ -1,11 +1,10 @@
 import {FC} from "react";
 
-import style from "./Movie.module.css";
+import style from "./MovieContainer/Movie.module.css";
 
 
 interface IProps {
     img_url: string,
-
 }
 
 const PosterPreview: FC<IProps>= ({img_url}) => {

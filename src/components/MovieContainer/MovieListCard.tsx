@@ -5,8 +5,8 @@ import {ISetState} from "../../types/ISetState";
 import {StarRating} from '../StarRating';
 import {IMovie} from "../../interfaces/movieInterface";
 import style from "./Movie.module.css"
-import {PosterPreview} from "./PosterPreview";
-import {MoviePage} from "../../pages/MoviePage";
+import {PosterPreview} from "../PosterPreview";
+
 
 interface IProps {
     movie: IMovie,
@@ -19,6 +19,7 @@ const MovieListCard: FC<IProps> = ({movie}) => {
     const navigate = useNavigate();
     const toMovie = () => {
         navigate(`/movie`)
+
     };
 
     return (

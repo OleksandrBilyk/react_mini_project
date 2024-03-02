@@ -23,3 +23,6 @@ export interface IMovies {
 export interface IPage{
     page: number
 }
+export interface ITheme{
+    theme: boolean
+}
