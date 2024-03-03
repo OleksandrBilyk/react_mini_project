@@ -11,7 +11,7 @@ const router = createBrowserRouter([
             {index: true, element: <Navigate to={'home'}/>},
             {path: 'home', element: <HomePage/>},
             {path: 'movie_list', element: <MovieListPage/>},
-            {path: 'movie', element: <MoviePage/>}
+            {path: 'movie/:id', element: <MoviePage/>}
 
         ]
     }

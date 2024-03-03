@@ -10,7 +10,7 @@ interface IProps {
 const PosterPreview: FC<IProps>= ({img_url}) => {
 
     return (
-        <div className={style.img_block}>
+        <div>
             <img className={style.img_poster} src={`https://www.themoviedb.org/t/p/w220_and_h330_face${img_url}`} alt="poster"/>
         </div>
     );

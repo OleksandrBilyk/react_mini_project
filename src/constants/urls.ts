@@ -1,12 +1,16 @@
 const baseURL:string = 'https://api.themoviedb.org/'
 
-const movie = '3/discover/movie'
+const movies = '3/discover/movie'
+const movie = "3/movie"
 const genre = '/genre'
 
 
 const urls = {
     movie: {
-        base: movie,
+        base: movies,
+        movie_info: {
+            byIds: (id:number) => `${movie}/${id}`
+        }
 
     }
 }

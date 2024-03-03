@@ -14,17 +14,20 @@ interface IProps {
 }
 
 const MovieListCard: FC<IProps> = ({movie}) => {
-    const {id, original_title, title, poster_path, backdrop_path, vote_average} = movie;
+    const {id, title, poster_path, vote_average} = movie;
 
     const navigate = useNavigate();
     const toMovie = () => {
-        navigate(`/movie`)
+        navigate(`/movie/${id}`)
 
     };
 
     return (
         <div onClick={toMovie} className={style.Movie_block}>
-            <PosterPreview img_url={poster_path}/>
+            <div  className={style.img_block}>
+                <PosterPreview img_url={poster_path}/>
+            </div>
+
             <div className={style.title}>{title}</div>
             <StarRating rating={vote_average}/>
         </div>
