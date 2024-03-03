@@ -1,13 +1,12 @@
 import {FC, useEffect, useState} from "react";
 import {useNavigate} from "react-router-dom";
-import {ISetState} from "../../types/ISetState";
 
 import {StarRating} from '../StarRating';
-import {IMovie, IMovie_details, IMoviesFind, ISearchRes} from "../../interfaces/movieInterface";
+import {IMovie_details, IMoviesFind} from "../../interfaces/movieInterface";
 import style from "./MovieFindCard.module.css"
 import {PosterPreview} from "../PosterPreview";
 import {movieService} from "../../services/movieService";
-import {Movie} from "../MovieContainer/Movie";
+
 
 
 interface IProps {
@@ -19,8 +18,7 @@ const MovieFindCard: FC<IProps> = ({movie_find}) => {
     const [movie,  setMovie] = useState<IMovie_details>(null);
     const id = movie_find.id
     useEffect(() => {
-            movieService.getById(+id).
-            then(({data}) => {
+            movieService.getById(+id).then(({data}) => {
                 setMovie(data)
             }).catch((e) => {
                     console.log(e);

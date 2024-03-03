@@ -14,3 +14,9 @@
 .Header a[class='active'] {
     color: red;
 }
+.icons{
+    width: 3vw;
+    height: 6vh;
+    background-image: url("../../../public/icons8-spy-48.png");
+    background-size: cover;
+}
