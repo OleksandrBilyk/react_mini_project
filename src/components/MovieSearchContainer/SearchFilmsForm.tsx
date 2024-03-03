@@ -1,13 +1,13 @@
 import {useEffect, useState} from "react";
 import {SubmitHandler, useForm} from "react-hook-form";
 
-import {IMovie, IRequest, ISearchRes} from "../../interfaces/movieInterface";
+import {IRequest, ISearchRes} from "../../interfaces/movieInterface";
 
 import {movieService} from "../../services/movieService";
 import {MovieFindCard} from "./MovieFindCard";
 import style from "../MovieContainer/Movie.module.css"
 import {usePageQuery} from "../../hooks/usePageQuery";
-import {useSearchParams} from "react-router-dom";
+
 
 
 const SearchFilmsForm = () => {
@@ -17,7 +17,7 @@ const SearchFilmsForm = () => {
     const {page, next, prev, default_page} = usePageQuery();
     // const [black_theme,] = useAppContext();
 
-console.log(page)
+
     useEffect(() => {
         movieService.findFilms(query, +page).then(({data}) => {
             setSearchRes(data)

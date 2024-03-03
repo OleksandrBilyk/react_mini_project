@@ -1,0 +1,16 @@
+.Movie_genre_page{
+    width: 99vw;
+    display: flex;
+}
+.Genres_block{
+    width: 20vw;
+}
+.Movies_block{
+    height: auto;
+    width: 75vw;
+    display: flex;
+    flex-wrap: wrap;
+}
+.Genres_badge{
+    margin-top: 2vh;
+}
