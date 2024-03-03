@@ -49,6 +49,10 @@ export interface ISearchRes{
     results: IMoviesFind[],
     total_pages: number,
 }
-export interface ITheme{
-    theme: boolean
+export interface IGenre{
+    id: number,
+    name: string
+}
+export interface IGenres{
+    genres: IGenre[]
 }

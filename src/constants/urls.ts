@@ -2,7 +2,7 @@ const baseURL:string = 'https://api.themoviedb.org/'
 
 const movies = '3/discover/movie'
 const movie = "3/movie"
-const genre = '/genre'
+const genre = '3/genre/movie/list'
 const find = '3/search/keyword'
 
 const urls = {
@@ -13,6 +13,9 @@ const urls = {
         },
         find: find,
 
+    },
+    genre:{
+        base: genre
     }
 }
 
