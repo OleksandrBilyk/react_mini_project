@@ -38,8 +38,16 @@ export interface IMovies {
     results: IMovie[]
 
 }
-export interface IPage{
-    page: number
+export interface IRequest{
+    keyword: string
+}
+export interface IMoviesFind {
+    id: number,
+    name: string
+}
+export interface ISearchRes{
+    results: IMoviesFind[],
+    total_pages: number,
 }
 export interface ITheme{
     theme: boolean

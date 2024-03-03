@@ -11,7 +11,7 @@ const PosterPreview: FC<IProps>= ({img_url}) => {
 
     return (
         <div>
-            <img className={style.img_poster} src={`https://www.themoviedb.org/t/p/w220_and_h330_face${img_url}`} alt="poster"/>
+            <img className={style.img_poster} src={`https://www.themoviedb.org/t/p/w220_and_h330_face${img_url}`}  alt={"poster"}/>
         </div>
     );
 };
