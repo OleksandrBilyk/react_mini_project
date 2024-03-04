@@ -33,9 +33,10 @@ console.log(with_genres)
             <div className={style.Movies_block}>
                 {movies.map(movie => <MovieListCard key={movie.id} movie={movie} />)}
             </div>
-            <div>
-                <button disabled={(+page <=1 )} onClick={prev}>prev</button>
-                <button disabled={(+page >= 500)} onClick={next}>next</button>
+            <div className={style.buttons_panel}>
+                <button className={style.button_pagination} disabled={(+page <=1 )} onClick={prev}>prev</button>
+                <div className={style.page_marker}>{page}</div>
+                <button className={style.button_pagination} disabled={(+page >= 500)} onClick={next}>next</button>
             </div>
         </div>
     );

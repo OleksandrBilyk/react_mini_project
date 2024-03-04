@@ -5,7 +5,7 @@ import {IRequest, ISearchRes} from "../../interfaces/movieInterface";
 
 import {movieService} from "../../services/movieService";
 import {MovieFindCard} from "./MovieFindCard";
-import style from "../MovieContainer/Movie.module.css"
+import style from "./MovieFindCard.module.css"
 import {usePageQuery} from "../../hooks/usePageQuery";
 
 
@@ -31,17 +31,18 @@ const SearchFilmsForm = () => {
     };
     return (
         <div>
-            <form onSubmit={handleSubmit(find)}>
-                <input type="text" placeholder={'keyword'} {...register('keyword', {required:true})}/>
-                <button>Find</button>
+            <form className={style.search_form} onSubmit={handleSubmit(find)}>
+                <input className={style.input_keyword} type="text" placeholder={'keyword'} {...register('keyword', {required:true})}/>
+                <button className={style.button_find}>Find</button>
             </form>
             <div className={style.Movies_block}>
                 {search_res.results.map(movie_find => <MovieFindCard key={movie_find.id} movie_find={movie_find} />)}
             </div>
             {search_res.total_pages<=1 ? <div></div> :
-            <div>
-                <button disabled={(+page <=1 )} onClick={prev}>prev</button>
-                <button disabled={(+page >= search_res.total_pages)} onClick={next}>next</button>
+            <div className={style.buttons_panel}>
+                <button className={style.button_pagination} disabled={(+page <=1 )} onClick={prev}>prev</button>
+                <div className={style.page_marker}>{page}</div>
+                <button className={style.button_pagination} disabled={(+page >= search_res.total_pages)} onClick={next}>next</button>
             </div>}
         </div>
 
