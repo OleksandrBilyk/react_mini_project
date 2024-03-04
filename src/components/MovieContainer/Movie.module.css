@@ -60,11 +60,11 @@
     background-color: blue;
     display: grid;
     grid-template-areas:
-    "picture info button"
-    "title info button"
-    "star info button"
+    "picture info_block genres_block"
+    "title info_block genres_block"
+    "star popularity button"
 ;
-    grid-template-columns: 3fr 2fr 1fr;
+    grid-template-columns: 3fr 2fr 2fr;
     grid-template-rows: 6fr 1fr 1fr;
 }
 .Movie_info_page{
@@ -108,4 +108,27 @@
     text-transform: uppercase;
     justify-content: center;
     align-items: center;
+}
+.info_block{
+    grid-area: info_block;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: 1.4em;
+}
+.popularity{
+    grid-area: popularity;
+}
+.genres_block{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4em;
+    color: #fffb00;
+    grid-area: genres_block;
+
+}
+.genres_block>h5{
+    height: 1vh;
 }

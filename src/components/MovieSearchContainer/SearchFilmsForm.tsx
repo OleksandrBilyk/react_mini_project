@@ -2,7 +2,6 @@ import {useEffect, useState} from "react";
 import {SubmitHandler, useForm} from "react-hook-form";
 
 import {IRequest, ISearchRes} from "../../interfaces/movieInterface";
-
 import {movieService} from "../../services/movieService";
 import {MovieFindCard} from "./MovieFindCard";
 import style from "./MovieFindCard.module.css"

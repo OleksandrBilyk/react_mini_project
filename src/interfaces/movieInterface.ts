@@ -11,7 +11,7 @@ export interface IMovie_details {
     adult: boolean,
     backdrop_path: string,
     budget: number
-    genres: {}[],
+    genres: [IGenre],
     homepage: string
     id: number,
     imdb_id: string
@@ -54,5 +54,5 @@ export interface IGenre{
     name: string
 }
 export interface IGenres{
-    genres: IGenre[]
+    genries: IGenre[]
 }

@@ -10,7 +10,7 @@ const SearchGenresForm = () => {
 
     useEffect(() => {
         genreService.getAll().then(({data}) => {
-            setGenresList(data.genres)
+            setGenresList(data.genries)
         })
     }, [])
     return (
