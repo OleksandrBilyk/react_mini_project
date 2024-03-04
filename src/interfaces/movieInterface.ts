@@ -54,5 +54,8 @@ export interface IGenre{
     name: string
 }
 export interface IGenres{
-    genries: IGenre[]
+    genres: [IGenre]
+}
+export interface IGenries{
+    genres: IGenre[]
 }

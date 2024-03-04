@@ -18,8 +18,7 @@ interface IProps {
 const Movie: FC<IProps> = ({movie_detail}) => {
     const {original_title, title, overview, popularity, backdrop_path, vote_average,adult, genres} = movie_detail;
 
-    console.log(genres)
-console.log(genres[0])
+
 
 
 
